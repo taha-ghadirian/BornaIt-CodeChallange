@@ -16,7 +16,7 @@ services:
   borna-task1-mysql:
     build: 
       context: .
-      dockerfile: DbDockerfile
+      dockerfile: Db.Dockerfile
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${SQL_ROOT_PASS}
