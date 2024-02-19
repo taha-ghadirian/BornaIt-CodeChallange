@@ -18,6 +18,8 @@ services:
       context: .
       dockerfile: Db.Dockerfile
     restart: unless-stopped
+    ports:
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${SQL_ROOT_PASS}
       MYSQL_DATABASE: task1

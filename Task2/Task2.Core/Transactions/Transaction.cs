@@ -3,15 +3,17 @@ using Task2.Core.People;
 
 namespace Task2.Core.Transactions;
 
-public class Transaction : AggregateRoot<TransactionId>
+public class Transaction : AggregateRoot
 {
-    public PersonId PersonId { get; set; }
+    public AggregateId PersonId { get; set; }
 
     public DateTime TransactionDate { get; set; }
 
     public int Price { get; set; }
 
-    public Transaction(TransactionId id, PersonId personId, DateTime transactionDate, int price)
+    public virtual Person Person { get; set; }
+        
+    public Transaction(AggregateId id, AggregateId personId, DateTime transactionDate, int price)
     {
         if(price is < 100 or > 1000000000)
         {

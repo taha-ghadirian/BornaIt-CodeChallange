@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Task2.Core;
 using Task2.Step1;
 
 string[] headers = { "Name", "Family", "Start Date", "End Date", "Sum", "Total" };
