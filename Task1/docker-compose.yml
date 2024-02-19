@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+
+  borna-task1-phpmyadmin:
+    image: phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: borna-task1-mysql
+    ports:
+      - 8081:80
+    depends_on:
+      - borna-task1-mysql
+
+    
+  borna-task1-mysql:
+    image: mariadb:10.6
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${SQL_ROOT_PASS}
+      MYSQL_DATABASE: task1
