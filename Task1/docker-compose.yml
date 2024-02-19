@@ -14,7 +14,9 @@ services:
 
     
   borna-task1-mysql:
-    image: mariadb:10.6
+    build: 
+      context: .
+      dockerfile: DbDockerfile
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${SQL_ROOT_PASS}
