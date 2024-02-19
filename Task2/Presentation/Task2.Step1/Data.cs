@@ -11,7 +11,7 @@ public static class Data
     /// <summary>
     /// People given in the description document
     /// </summary>
-    public static List<Person> People =>
+    public static List<Person> People =
     [
         new Person(new PersonId(), "Jane", "Parker"),
         new Person(new PersonId(), "Mike", "Copper")
@@ -20,7 +20,7 @@ public static class Data
     /// <summary>
     /// Transactions given in the description document
     /// </summary>
-    public static List<Transaction> Transactions =>
+    public static List<Transaction> Transactions =
     [
         new Transaction(new TransactionId(), 
             People[0].Id,
@@ -42,7 +42,7 @@ public static class Data
         new Transaction(new TransactionId(), 
             People[1].Id,
             new DateTime(2019, 11, 01, 14, 30, 00),
-            300000),
+            100000),
         new Transaction(new TransactionId(), 
             People[1].Id,
             new DateTime(2019, 11, 01, 12, 30, 00),
